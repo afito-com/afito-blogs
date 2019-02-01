@@ -1,0 +1,15 @@
+@import "../css/base";
+
+.Header {
+  background-color: white;
+  color: white;
+  padding: 10px 0;
+
+  & a {
+    color: white;
+  }
+
+  & img {
+    max-width: 200px;
+  }
+}

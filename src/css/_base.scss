@@ -1,0 +1,59 @@
+@import "normalize";
+
+$columns: 12;
+
+$xs: 320px;
+$sm: 600px;
+$md: 1024px;
+$lg: 1440px;
+$xl: 1920px;
+
+$grid-xs-width: 500px;
+$grid-sm-width: 700px;
+$grid-md-width: 900px;
+$grid-lg-width: 1080px;
+$grid-xl-width: 1080px;
+
+$gutter-xs: 8px;
+$gutter-sm: 16px;
+$gutter-md: 24px;
+$gutter-lg: 24px;
+$gutter-xl: 36px;
+
+$primary-color: #264179;
+$secondary-color: #f4f5f7;
+$success-color: #3ead87;
+$danger-color: rgb(246, 119, 119);
+$warning-color: rgb(255, 235, 148);
+
+$body-font: "Graphik", sans-serif;
+$header-font: "Graphik", sans-serif;
+$font-size: 1rem;
+$border-radius: 3px;
+
+$input-focus-border-primary: 0 0 0 0.15rem lighten($primary-color, 5%);
+$input-focus-border-secondary: 0 0 0 0.15rem lighten($secondary-color, 5%);
+$input-focus-border-success: 0 0 0 0.15rem lighten($success-color, 5%);
+$input-focus-border-warning: 0 0 0 0.15rem lighten($warning-color, 5%);
+$input-focus-border-danger: 0 0 0 0.15rem lighten($danger-color, 5%);
+$input-font-color: #202b33;
+$input-padding: 10px;
+$input-border-radius: $border-radius;
+
+$select-border-radius: $border-radius;
+
+$button-padding: ($font-size * 0.5) ($font-size * 0.625);
+$button-border-radius: $border-radius;
+$button-shadow: none;
+$button-shadow-depressed: 0 0 0 0.5px rgba(50, 50, 93, .15), 0 2px 5px 0 rgba(50, 50, 93, .08), 0 1px 1.5px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .06), 0 0 0 0 transparent;
+
+$card-shadow: none;
+$card-border-radius: $border-radius;
+$card-background-color: #232832;
+
+$flash-padding: 16px;
+$flash-margin: 10px 0;
+$flash-border-radius: $border-radius;
+
+$background-color: #f4f5f7 !default;
+$background-text-color: #1c2646 !default;

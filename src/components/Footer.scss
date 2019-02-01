@@ -1,0 +1,50 @@
+@import "../css/base";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #6b7682;
+  background-color: #040d14;
+
+  @media only screen and (min-width: 768px) {
+    padding: 50px;
+  }
+}
+
+.Footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 768px) {}
+}
+
+.Footer__social i {
+  padding: 0 20px;
+}
+
+.Footer a {
+  color: #6b7682;
+  text-align: center;
+}
+
+.Footer hr {
+  height: 0;
+  width: 66%;
+  border: 0;
+  border-bottom: 1px solid #6b7682;
+  margin: 20px;
+}
+
+.Footer .row {
+  padding: 30px 0;
+  justify-content: center;
+}
+
+.Footer .row a {
+  padding: 20px;
+}

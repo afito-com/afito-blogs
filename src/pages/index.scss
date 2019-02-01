@@ -1,0 +1,28 @@
+@import "../css/base";
+
+.Homepage {
+  min-height: 100vh;
+}
+
+.Story {
+  color: $background-text-color;
+  width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  & .featured-heading {
+    @media only screen and (min-width: $md) {
+      margin-top: 0;
+    }
+  }
+}
+
+.spacer {
+  padding: 30px 0;
+}

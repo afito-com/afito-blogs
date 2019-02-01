@@ -1,0 +1,29 @@
+.card {
+  background-color: $card-background-color;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: $card-shadow;
+  border-radius: $card-border-radius;
+
+  &__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $header-font;
+    font-weight: bolder;
+    margin: 0 0 8px 0;
+  }
+
+  &__description {
+    padding: 10px;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+}
