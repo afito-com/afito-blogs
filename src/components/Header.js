@@ -1,5 +1,5 @@
 'use-strict';
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import './Header.scss';
