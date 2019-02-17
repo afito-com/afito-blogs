@@ -1,0 +1,37 @@
+[
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "4-important-apartment-hunting-tips-for-students-df1",
+        "path": "/4-important-apartment-hunting-tips-for-students/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-html-516",
+        "path": "/404.html"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-22d",
+        "path": "/404/"
+    },
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "how-to-get-the-most-out-of-your-afito-listing-54a",
+        "path": "/how-to-get-the-most-out-of-your-afito-listing/"
+    },
+    {
+        "componentChunkName": "component---src-templates-blog-post-js",
+        "jsonName": "on-campus-vs-off-campus-housing-bbe",
+        "path": "/on-campus-vs-off-campus-housing/"
+    }
+]
