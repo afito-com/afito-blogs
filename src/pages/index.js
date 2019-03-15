@@ -25,6 +25,7 @@ class BlogIndex extends React.Component {
         <SEO
           title="All posts"
           keywords={keywords}
+          image={posts[0].node.frontmatter.cover.childImageSharp.fluid.src}
         />
         <div className="Homepage container">
           <div className="row">
