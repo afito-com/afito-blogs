@@ -2,7 +2,7 @@
 title: 3 Things You Need to Know Before Signing a Lease for an Apartment
 subtitle: Tips on signing a lease for an apartment
 author: ''
-date: 2019-03-15
+date: 2019-03-14
 cover: ./cover.jpg
 twitter: ''
 facebook: ''
