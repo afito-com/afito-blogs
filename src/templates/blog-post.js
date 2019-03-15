@@ -23,8 +23,8 @@ class BlogPostTemplate extends React.Component {
             <div className="col--xs--12">
               <h1 className="Post__title">{post.frontmatter.title}</h1>
               <p>
-                <span className="Post__author">{post.frontmatter.author}&nbsp;</span>
-                <span className="Post__published">{post.frontmatter.date}</span>
+                {!!post.frontmatter.author && <span className="Post__author">{post.frontmatter.author}&nbsp;</span>}
+                {!!post.frontmatter.date && <span className="Post__published">{post.frontmatter.date}</span>}
               </p>
               <div className="Post__social">
                 {!!post.frontmatter.medium && <a href={post.frontmatter.medium}><FaMedium size="1.5em" /></a>}

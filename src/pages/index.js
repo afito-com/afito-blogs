@@ -60,7 +60,10 @@ class BlogIndex extends React.Component {
                         <Image className="Story__img" fluid={node.frontmatter.cover.childImageSharp.fluid} alt="Cover" />
                         <h4>{title}</h4>
                       </Link>
-                      <p><span className="light">{node.frontmatter.author}<br />{node.frontmatter.date}</span></p>
+                      <p>
+                        {!!node.frontmatter.author && <span className="light">{node.frontmatter.author}<br /></span>}
+                        {!!node.frontmatter.date && <span className="light">{node.frontmatter.date}</span>}
+                      </p>
                     </div>
                   );
                 })}
