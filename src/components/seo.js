@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, keywords, image, title }) {
               },
               {
                 property: `og:image`,
-                content: `${window.location.href}${image}`,
+                content: `https://blog.afito.com/${image}`,
               },
               {
                 property: `og:description`,
