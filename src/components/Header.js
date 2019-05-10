@@ -11,16 +11,17 @@ const Header = () => {
         return (
           <div className="Header">
             <div className="container">
-              <div className="row">
-                <div className="col--xs--12">
-                  <Link to={'/'} style={{ width: '165px' }}>
-                    <Image
-                      fluid={data.avatar.childImageSharp.fluid}
-                      alt="Logo"
-                      fadeIn={false}
-                    />
-                  </Link>
-                </div>
+              <div className="row" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                <Link to={'/'} style={{ width: '165px' }}>
+                  <Image
+                    fluid={data.avatar.childImageSharp.fluid}
+                    alt="Logo"
+                    fadeIn={false}
+                  />
+                </Link>
+
+
+                <a href="https://afito.com">Find a property</a>
               </div>
             </div>
           </div>

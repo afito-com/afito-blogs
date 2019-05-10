@@ -40,7 +40,6 @@ const Footer = () => {
                   <h5>Legal</h5>
                   <a href="https://afito.com/privacy">Privacy Policy</a>
                   <a href="https://afito.com/terms">Terms</a>
-                  <a href="#">Data Rights</a>
                 </div>
                 <div className="row" style={{ marginTop: "50px" }}>
                   <div className="col--xs--12 col--lg--12">

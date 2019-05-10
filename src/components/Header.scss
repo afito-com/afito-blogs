@@ -6,7 +6,8 @@
   padding: 10px 0;
 
   & a {
-    color: white;
+    color: $primary-color;
+    font-weight: bold;
   }
 
   & img {
