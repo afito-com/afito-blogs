@@ -19,9 +19,7 @@ const Header = () => {
                     fadeIn={false}
                   />
                 </Link>
-
-
-                <a href="https://afito.com">Find a property</a>
+                <a href="/">Find a property</a>
               </div>
             </div>
           </div>
