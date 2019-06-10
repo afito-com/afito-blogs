@@ -25,7 +25,7 @@ const Footer = () => {
                   <h5 style={{ margin: "20px 0 0 0" }}>A better place for students.</h5>
                   <div className="row" style={{ margin: "40px 0" }}>
                     <a style={{ paddingRight: "16px" }} href="https://www.facebook.com/RentAfito"><FaFacebookSquare size="1.5em" /></a>
-                    <a style={{ paddingRight: "16px" }} href="https://www.instagram.com/rentafito/"><FaInstagram size="1.5em" /></a>
+                    <a style={{ paddingRight: "16px" }} href="https://www.instagram.com/rent_afito/"><FaInstagram size="1.5em" /></a>
                     <a style={{ paddingRight: "16px" }} href="https://twitter.com/RentAfito"><FaTwitter size="1.5em" /></a>
                     <a style={{ paddingRight: "16px" }} href="https://www.linkedin.com/company/afito/"><FaLinkedin size="1.5em" /></a>
                   </div>
