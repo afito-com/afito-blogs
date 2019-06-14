@@ -26,32 +26,37 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-8bbfa98bdde5b440a2f2.js"
+    "url": "webpack-runtime-d9eea013016d6b911e3d.js"
   },
   {
-    "url": "app-d225a129ff29e5a41030.js"
+    "url": "app-4ea3b3c299729907d78e.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-4ae023d43c9af45142cc.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-81e9f350ef9d894aa4c9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9828ce2b3df2329de09bb706d8ccbd22"
+    "revision": "63579ea5194325d0b77211171c1533b6"
   },
   {
-    "url": "component---src-pages-404-js.c4addac8e1e2909d0fa4.css"
+    "url": "styles.0c58bf512df6e2f8f149.css"
   },
   {
-    "url": "component---src-pages-404-js-9f56df333195993250f9.js"
+    "url": "1-1b17c64a702ade22d088.js"
   },
   {
-    "url": "0-c5a25c19ff826cf7160a.js"
+    "url": "component---src-pages-404-js-b6f0d7b356f9907534a8.js"
   },
   {
-    "url": "static/d/269/path---404-html-516-62a-wHpxynuECbzd0fnrGbZH3cyEBA.json"
+    "url": "styles-740dfbb02b9cf4dfd64f.js"
   },
   {
-    "url": "static/d/520/path---offline-plugin-app-shell-fallback-a-30-c5a-NZuapzHg3X9TaN1iIixfv1W23E.json"
+    "url": "page-data/404.html/page-data.json",
+    "revision": "b176c1ad4ab1baa6fc9a00c7fa9e5597"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "61c84934043265cd8f3a51a02a13d2ea"
   },
   {
     "url": "manifest.webmanifest",
@@ -76,7 +81,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/blog/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -148,7 +153,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/blog${pathname}`
+        return `${pathname}`
       } else {
         return pathname
       }
