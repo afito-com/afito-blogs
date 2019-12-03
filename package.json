@@ -63,7 +63,7 @@
     "test": "echo Write tests!",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
-    "pregit": "npm test && npm run build",
+    "pregit": "npm test && gatsby build --prefix-paths",
     "git": "git add . && git commit -m",
     "postgit": "git push origin master",
     "start": "npm run develop",
