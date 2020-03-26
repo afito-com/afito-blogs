@@ -28,7 +28,25 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props;
-    //const rootPath = `${__PATH_PREFIX__}/`
+    const { user } = this.state;
+
+    let nav = [];
+    if (user) {
+      if (user.account_type === 'landlord') {
+        nav = [
+          { name: 'Profile', href: '/dashboard' },
+          { name: 'Properties', href: '/dashboard/properties' },
+          { name: 'Premium Listings', href: '/dashboard/premium-listings' },
+          { name: 'Billing', href: '/dashboard/billing' },
+          { name: 'Favorites', href: '/dashboard/favorites' }
+        ];
+      } else if (user.account_type) {
+        nav = [
+          { name: 'Profile', href: '/dashboard' },
+          { name: 'Favorites', href: '/dashboard/favorites' }
+        ];
+      }
+    }
 
     return (
       <ThemeProvider theme={{}}>
@@ -38,7 +56,8 @@ class Layout extends React.Component {
           </Helmet>
           <Header
             dark={false}
-            user={this.state.user}
+            user={user}
+            nav={nav}
             createUser={createUser}
             signIn={signIn}
             signOut={signOut}
