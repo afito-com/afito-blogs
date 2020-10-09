@@ -8,16 +8,16 @@ import './blog-post.scss';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
+    const post = this.props.data.post;
+    const siteTitle = post.document.title;
     const { previous, next } = this.props.pageContext;
-
+    console.log({ post });
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.excerpt}
-          image={post.frontmatter.cover.childImageSharp.fluid.src}
+          title={post.document.title}
+          description={post.childMarkdownRemark.excerpt}
+          image={post.childMarkdownRemark.frontmatter.cover.childImageSharp.fluid.src}
         />
         <Image className="Post__img container" fluid={post.frontmatter.cover.childImageSharp.fluid} alt="Cover" />
         <div className="Post container">
@@ -25,27 +25,31 @@ class BlogPostTemplate extends React.Component {
             <div className="col--xs--12">
               <h1 className="Post__title">{post.frontmatter.title}</h1>
               <p>
-                {!!post.frontmatter.author && <span className="Post__author">{post.frontmatter.author}&nbsp;</span>}
-                {!!post.frontmatter.date && <span className="Post__published">{post.frontmatter.date}</span>}
+                {!!post.childMarkdownRemark.frontmatter.author && (
+                  <span className="Post__author">{post.frontmatter.author}&nbsp;</span>
+                )}
+                {!!post.childMarkdownRemark.frontmatter.date && (
+                  <span className="Post__published">{post.frontmatter.date}</span>
+                )}
               </p>
               <div className="Post__social">
-                {!!post.frontmatter.medium && (
-                  <a href={post.frontmatter.medium}>
+                {!!post.childMarkdownRemark.frontmatter.medium && (
+                  <a href={post.childMarkdownRemark.frontmatter.medium}>
                     <FaMedium size="1.5em" />
                   </a>
                 )}
-                {!!post.frontmatter.twitter && (
-                  <a href={post.frontmatter.twitter}>
+                {!!post.childMarkdownRemark.frontmatter.twitter && (
+                  <a href={post.childMarkdownRemark.frontmatter.twitter}>
                     <FaTwitter size="1.5em" />
                   </a>
                 )}
-                {!!post.frontmatter.instagram && (
-                  <a href={post.frontmatter.instagram}>
+                {!!post.childMarkdownRemark.frontmatter.instagram && (
+                  <a href={post.childMarkdownRemark.frontmatter.instagram}>
                     <FaInstagram size="1.5em" />
                   </a>
                 )}
-                {!!post.frontmatter.facebook && (
-                  <a href={post.frontmatter.facebook}>
+                {!!post.childMarkdownRemark.frontmatter.facebook && (
+                  <a href={post.childMarkdownRemark.frontmatter.facebook}>
                     <FaFacebookSquare size="1.5em" />
                   </a>
                 )}
@@ -91,32 +95,34 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate;
 
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
+export const query = graphql`
+  query($path: String) {
+    post: googleDocs(document: { path: { eq: $path } }) {
+      document {
         title
-        author
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        author
-        twitter
-        instagram
-        medium
-        facebook
-        date(formatString: "MMMM DD, YYYY")
+        date
         cover {
-          childImageSharp {
-            fluid(maxWidth: 1080, maxHeight: 580) {
-              ...GatsbyImageSharpFluid
+          image {
+            childImageSharp {
+              fluid(maxWidth: 200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
+        }
+      }
+      childMarkdownRemark {
+        id
+        excerpt(pruneLength: 160)
+        html
+        frontmatter {
+          title
+          author
+          twitter
+          instagram
+          medium
+          facebook
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
@@ -61,11 +63,21 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/shortlogo2.png`
+        display: `minimal-ui`
+        // icon: `content/assets/shortlogo2.png`
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-google-docs',
+      // resolve: require.resolve(`..`),
+      options: {
+        debug: true,
+        folders: [process.env.GOOGLE_DOCS_FOLDER],
+        fields: ['createdTime', 'name'],
+        fieldsMapper: { createdTime: 'date', name: 'title' }
+      }
+    }
   ]
 };
