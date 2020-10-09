@@ -3,7 +3,7 @@ title: How to Maximize Space in Your College Apartment or Dorm
 subtitle:
 author:
 date: 2020-06-28
-cover: ./cover.jpeg
+cover: ./cover.jpg
 twitter: ''
 facebook: ''
 instagram: ''

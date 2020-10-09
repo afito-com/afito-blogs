@@ -3,7 +3,7 @@ title: How to Make Friends at Baylor University When Living Off-Campus
 subtitle:
 author:
 date: 2020-09-14
-cover: ./cover.jpeg
+cover: ./cover.jpg
 twitter: ''
 facebook: ''
 instagram: ''

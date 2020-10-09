@@ -3,7 +3,7 @@ title: 5 Signs You Should Move Off Campus
 subtitle:
 author:
 date: 2020-10-28
-cover: ./cover.jpeg
+cover: ./cover.jpg
 twitter: ''
 facebook: ''
 instagram: ''

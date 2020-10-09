@@ -3,7 +3,7 @@ title: 7 Signs That It’s Time to Move Off Campus
 subtitle:
 author:
 date: 2020-06-14
-cover: ./cover.jpeg
+cover: ./cover.jpg
 twitter: ''
 facebook: ''
 instagram: ''

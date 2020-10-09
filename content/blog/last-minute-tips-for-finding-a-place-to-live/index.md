@@ -3,7 +3,7 @@ title: Last-Minute Tips for Finding a Place to Live
 subtitle:
 author:
 date: 2020-07-14
-cover: ./cover.jpeg
+cover: ./cover.jpg
 twitter: ''
 facebook: ''
 instagram: ''
