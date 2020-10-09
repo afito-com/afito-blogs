@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
@@ -68,16 +66,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-source-google-docs',
-      // resolve: require.resolve(`..`),
-      options: {
-        debug: true,
-        folders: [process.env.GOOGLE_DOCS_FOLDER],
-        fields: ['createdTime', 'name'],
-        fieldsMapper: { createdTime: 'date', name: 'title' }
-      }
-    }
+    `gatsby-plugin-react-helmet`
   ]
 };
