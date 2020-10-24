@@ -40,7 +40,7 @@ class BlogIndex extends React.Component {
                   </Link>
                 </div>
                 <div className="col--xs--12 col--md--4">
-                  <Link className="Story" to={`/${posts[0].node.fields.slug}`}>
+                  <Link className="Story" to={`${posts[0].node.fields.slug}`}>
                     <h1 className="featured-heading">{posts[0].node.frontmatter.title}</h1>
                   </Link>
                   <p>
